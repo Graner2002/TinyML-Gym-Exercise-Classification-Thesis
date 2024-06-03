@@ -10,7 +10,7 @@ The code is devided in three blocks:
 
 ## Data Preprocessing and Model Training
 
-This folder contains two Python Codes. Both were designed using Colab environment, that's why they are devided in blocks. The first Python file is for plotting and splitting csv formatted 9-axis IMU data. The second file is for preparing the training data, traing the model, analyze its performance and deploy it into a byte arryay. 
+This folder contains two Python Codes. Both were designed using Colab environment, that's why they are divided in blocks. The first Python file is for plotting and splitting csv formatted 9-axis IMU data. The second file is for preparing the training data, traing the model, analyze its performance and deploy it into a byte arryay. 
 
 
 ## Data Collection and Inference
