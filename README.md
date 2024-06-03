@@ -1,4 +1,4 @@
-# TinyML Gym Exercise Classification Thesis
+# TinyML Gym Exercises Classification Thesis
 
 This repository holds the software code for the thesis on: CLASSIFICATION OF GYM EXERCISES USING TINY MACHINE LEARNING
 
