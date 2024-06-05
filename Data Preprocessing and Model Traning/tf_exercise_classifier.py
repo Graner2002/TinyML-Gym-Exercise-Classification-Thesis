@@ -1,4 +1,10 @@
-# --- Preprocess and prepare data ---
+"""
+    #############################################################
+    --- Preprocess and prepare data ---
+    #############################################################
+
+    Snippet to import IMU data from csv files and input it to the training tensors. 
+"""
 
 import numpy as np
 import pandas as pd
@@ -135,7 +141,13 @@ outputs_train, outputs_test, outputs_validate = np.split(outputs, [TRAIN_SPLIT, 
 print("Data set randomization and splitting complete.")
 
 
-# --- Plot Data Distribution ---
+"""
+    #############################################################
+    --- Plot Data Distribution ---
+    #############################################################
+    
+    Snippet to plot the data distribution of the previously prepared dataset. 
+"""
 
 from sklearn.decomposition import PCA
 from mpl_toolkits.mplot3d import Axes3D
@@ -157,7 +169,14 @@ ax.set_zlabel('Principal Component 3')
 ax.legend()
 plt.show()
 
-# --- Train Model ---
+
+"""
+    #############################################################
+    --- Train Model ---
+    #############################################################
+    
+    Snippet to tune and train the machine learning model with the previously prepared dataset. 
+"""
 
 # Build the neural network model
 model = tf.keras.Sequential()
@@ -176,7 +195,13 @@ model.compile(optimizer=optimizer, loss='mse', metrics=['mae', 'accuracy'])
 history = model.fit(inputs_train, outputs_train, epochs=200, batch_size=1, validation_data=(inputs_validate, outputs_validate))
 
 
-# --- Plot Loss ---
+"""
+    #############################################################
+    --- Plot Loss ---
+    #############################################################
+    
+    Snippet to plot the training and validation loss during the previous train process. 
+"""
 
 plt.rcParams["figure.figsize"] = (20, 10)
 
@@ -195,7 +220,13 @@ plt.show()
 print(plt.rcParams["figure.figsize"])
 
 
-# --- Plot Confusion Matrix ---
+"""
+    #############################################################
+    --- Plot Confusion Matrix ---
+    #############################################################
+    
+    Snippet to plot plot the confusion matrix with the results of inferencing the model with the test dataset. 
+"""
 
 from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score
 import seaborn as sns
@@ -229,7 +260,13 @@ plt.yticks(rotation=45)
 plt.show()
 
 
-# --- TensorFlow Lite Conversion and Model to Byte Array ---
+"""
+    #############################################################
+    --- TensorFlow Lite Conversion and Model to Byte Array ---
+    #############################################################
+    
+    Snippet to compile the machine learning model to TensorFlow Lite format and export it into byte array. 
+"""
 
 # Convert the Keras model to TensorFlow Lite format
 converter = tf.lite.TFLiteConverter.from_keras_model(model)
